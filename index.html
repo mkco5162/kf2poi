@@ -2,18 +2,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>KF2POI Server Redirect ver0.2</title>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-		<script type="text/javascript">
-			//<![CDATA[
-			$(function(){ $("#SD01").load("http://kf2poi.ddns.net:8001/ServerAdmin/current/info #gamesummary-details");
-				});
-			//]]>
-		</script>
+		<title>KF2POI Server Redirect ver0.3</title>
+		<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 	</head>
 	<body>
-		&nbsp;<a href="http://kf2poi.ddns.net:8001/" target="_blank"><font size="4.0em" color="black">Server 01</font></a></br>
-		<div id="SD01"></div></br></br>
+		<div id="Server01"><a href="http://kf2poi.ddns.net:8001/" target="_blank"><font size="4.0em" color="black">Server 01</font></a></br>
+		<script>
+			$( document ).ready( function() {
+				$( '#SD01' ).load( 'http://kf2poi.ddns.net:8001/ServerAdmin/current/info #gamesummary-details' );
+			} );
+		</script>
+		<div id="SD01"></div></br></br></div>
 		&nbsp;<a href="http://kf2poi.ddns.net:8002/" target="_blank"><font size="4.0em" color="black">Server 02</font></a></br></br>
 		&nbsp;<a href="http://kf2poi.ddns.net:8003/" target="_blank"><font size="4.0em" color="black">Server 03</font></a></br></br>
 		&nbsp;<a href="http://kf2poi.ddns.net:8004/" target="_blank"><font size="4.0em" color="black">Server 04</font></a></br></br>
