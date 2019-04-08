@@ -2,21 +2,25 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>KF2POI Server Redirect ver0.09</title>
+		<title>KF2POI Server Redirect ver0.10</title>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script type="text/javascript" language="javascript">
-				$.ajax({
-					type : "GET",
-					url : "http://kf2poi.ddns.net:8001/ServerAdmin/current/info",
-					dataType : "text",
-					error : function(request,status,error){
-						alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
-					},
-				       success : function(data){
-					alert("통신데이터 값 : " + data) ;
-					$("#SD01").html(data) ;
+			$.ajax({
+				type:"POST",
+				url : "http://"+ip+"/test2.php",
+				data : "ref1="+gw_name,
+				dataType : "jsonp",
+				jsonpCallback : "myCallback",
+				success: function(data) {
+					console.log('성공 - ', data);
+					if(data != null)    {
+						alert(data.message + "[" + data.time + "]" + data.gate_name);
+					}
+				},
+				error: function(xhr) {
+					console.log('실패 - ', xhr);
 				}
-				});
+			});
 		</script>
 	</head>
 	<body>
