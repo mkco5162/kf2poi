@@ -9,7 +9,7 @@
 					type : "GET",
 					url : "http://kf2poi.ddns.net:8001/ServerAdmin/current/info",
 					dataType : "text",
-					error : function(){
+					error : function(request,status,error){
 						alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
 					},
 				       success : function(data){
