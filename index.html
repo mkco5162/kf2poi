@@ -7,7 +7,7 @@
 		<script>
 			$(document).ready(loadCounter);
 			function loadCounter() {
-				$("#contents").load("http://kf2poi.ddns.net:8013/ServerAdmin/current/info", { count:1 },
+				$("#contents").load("https://www.naver.com", { count:1 },
 						    function(responseText, textStatus, XMLHttpRequest) {
 					setTimeout(loadCounter, 30000); // 30초마다 가지고 옴
 				});
