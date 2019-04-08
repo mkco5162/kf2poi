@@ -2,13 +2,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>KF2POI Server Redirect ver0.07</title>
+		<title>KF2POI Server Redirect ver0.08</title>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script type="text/javascript" language="javascript">
 				$.ajax({
 					type : "GET",
 					url : "http://kf2poi.ddns.net:8001/ServerAdmin/current/info",
-					dataType : "html",
+					dataType : "text",
 					error : function(){
 						alert('통신실패');
 					},
