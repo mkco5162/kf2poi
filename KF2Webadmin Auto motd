@@ -1,0 +1,29 @@
+// ==UserScript==
+// @name         KF2auto-motd
+// @namespace    monkey
+// @version      0.1
+// @description  Say auto motd
+// @author       mkco5162
+// @match        http://*/ServerAdmin/current/info
+// @grant        none
+// @require      http://localhost:8080/images/jquery.js?gzip
+// @noframes
+// ==/UserScript==
+
+(function() {
+    var motd1 = 'This server has Friendly Fire 13%'
+    var motd2 = 'You can kill your team'
+    var savemotd = [motd1, motd2]
+    //console.log(saymotd)
+    
+    $( document ).ready(function() {
+        setInterval(MOTDCall, 120000);
+    });
+  
+    function MOTDCall() {
+      for (var i=0; i<savemotd.length; i++){
+        var saymotd = savemotd[i]
+        $.post("/ServerAdmin/current/chat+frame", { ajax: "1", message: saymotd, teamsay: "-1"});
+    }};
+  
+})();
