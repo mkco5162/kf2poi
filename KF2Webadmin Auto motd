@@ -7,9 +7,6 @@
 // @match        http://*/ServerAdmin/current/info
 // @grant        none
 // @require      http://localhost:8080/images/jquery.js?gzip
-// @homepageURL  https://gist.github.com/eduzappa18/3fe86e884fa022797236153d37e3559f
-// @updateURL    https://gist.githubusercontent.com/eduzappa18/3fe86e884fa022797236153d37e3559f/raw/KillingFloorWebAdminLinkifier.user.js
-// @downloadURL  https://gist.githubusercontent.com/eduzappa18/3fe86e884fa022797236153d37e3559f/raw/KillingFloorWebAdminLinkifier.user.js
 // @noframes
 // ==/UserScript==
 
