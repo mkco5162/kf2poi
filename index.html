@@ -13,7 +13,7 @@
 				<div id=Serversum"></div><br><br>
 				<script>
 				$.ajax({
-				   url:http://kf2poi.ddns.net:8001/ServerAdmin/current/info,
+				   url:'http://kf2poi.ddns.net:8001/ServerAdmin/current/info',
 				   type:'GET',
 				   success: function(data){
 				       $('#Serversum').html($(data).find('#gamesummary').html());
